@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="UserApp">
+<head>
+  <meta charset="UTF-8" />
+  <title>Restaurant Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+    }
+    header {
+      margin-bottom: 2em;
+    }
+    nav a {
+      margin-right: 1em;
+      text-decoration: none;
+      color: #337ab7;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .error-msg {
+      color: red;
+      font-style: italic;
+      margin-top: 0.5em;
+    }
+    .success-msg {
+      color: green;
+      font-weight: bold;
+      margin-top: 1em;
+    }
+    form div {
+      margin-bottom: 1em;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.2em;
+    }
+    input.ng-invalid.ng-dirty {
+      border-color: red;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a ui-sref="myinfo">My Info</a>
+      <a ui-sref="signup">Sign Up</a>
+    </nav>
+  </header>
+  
+  <div class="container" ui-view></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"></script>
+
+  <script src="app.module.js"></script>
+  <script src="routes.js"></script>
+  <script src="user.service.js"></script>
+  <script src="signup.controller.js"></script>
+  <script src="myinfo.controller.js"></script>
+</body>
+</html>
